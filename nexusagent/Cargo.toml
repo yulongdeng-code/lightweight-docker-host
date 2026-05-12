@@ -1,0 +1,32 @@
+[package]
+name = "nexusagent"
+version = "0.1.0"
+description = "NexusAgent - 融合四大精华的超级智能体"
+authors = ["NexusAgent Team"]
+license = "MIT"
+repository = "https://github.com/nexusagent/nexusagent"
+edition = "2021"
+
+[workspace]
+members = ["src-tauri"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+thiserror = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+chrono = { version = "0.4", features = ["serde", "utc"] }
+rusqlite = { version = "0.30", features = ["chrono"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+reqwest = { version = "0.11", features = ["json"] }
+url = "2.5"
+html2md = "0.2"
+bollard = "0.16"
+futures = "0.3"
+regex = "1.10"
+uuid = { version = "1.6", features = ["v4"] }
+
+[dev-dependencies]
+tempfile = "3.8"
